@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+}
+
+/*Fondo oscuro.*/
+
+body {
+  margin: 0;
+  background-color: rgb(41, 41, 41);
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+/*La imagen de fondo se ajusta a la hoja y la hoja crece si el contenido es más largo.*/
+
+.hoja {
+  display: block;
+  max-width: 720px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 100%;
+}
+
+.hoja-carta {
+  aspect-ratio: 1472 / 2182;
+  background-image: url("../img/FondoTipoCartaAntigua.jpg");
+}
+
+.hoja-marco {
+  max-width: 600px;
+  aspect-ratio: 607 / 1080;
+  background-image: url("../img/MarcoReal.jpg");
+}
+
+/*Los porcentajes de relleno se calculan sobre el ancho de la hoja.*/
+
+.hoja-carta .contenido {
+  padding: 15% 18%;
+}
+
+.hoja-marco .contenido {
+  padding: 36% 16% 26%;
+}
+
+/*Encabezados y textos.*/
+
+header {
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 24px;
+  font-size: 1.9rem;
+  line-height: 1.3;
+}
+
+h2 {
+  margin: 0 0 8px;
+  font-size: 1.3rem;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+small {
+  font-size: 0.875rem;
+  line-height: 1.3;
+}
+
+.volver {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+/*Formularios.*/
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.35);
+  border: 1px solid #000;
+  border-radius: 0;
+  padding: 7px 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 1px #000;
+}
+
+/*Botones y enlaces con forma de botón*/
+
+.boton {
+  display: block;
+  font: inherit;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 0;
+  padding: 10px 16px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  box-shadow: none;
+}
+
+.boton:hover,
+.boton:focus,
+.boton:focus-visible,
+.boton:active,
+.boton:visited {
+  color: #000;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+}
+
+.boton-corto {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 1rem;
+}
+
+/*Menú principal: un botón debajo de otro.*/
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+/*Resultados y avisos.*/
+
+.resultado {
+  margin-top: 24px;
+  padding-top: 12px;
+  border-top: 1px solid #000;
+}
+
+.dato {
+  font-size: 1.6rem;
+  overflow-wrap: anywhere;
+}
+
+.serie {
+  overflow-wrap: anywhere;
+}
+
+.aviso {
+  margin-top: 20px;
+  padding: 8px 12px;
+  border: 1px solid #000;
+}
+
+/*Historial de la calculadora.*/
+
+.historial {
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.historial li {
+  padding: 4px 0;
+  border-bottom: 1px solid #000;
+}
+
+/*Pantallas angostas.*/
+
+@media (max-width: 480px) {
+  .hoja-carta .contenido {
+    padding: 19% 17%;
+  }
+
+  .hoja-marco .contenido {
+    padding: 34% 12%;
+  }
+
+  .menu {
+    gap: 8px;
+  }
+
+  .menu .boton {
+    padding: 7px 12px;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,13 @@
+{{{encabezado}}}
+
+<section>
+    <form method="post" action="index.php?app=estadistica">
+        <div class="campo">
+            <label for="valores">Números reales</label>
+            <textarea id="valores" name="valores" rows="4" required>{{valores}}</textarea>
+            <small>Valores separados por espacios, saltos de línea o punto y coma. Los decimales se escriben con punto o con coma.</small>
+        </div>
+        <button class="boton" type="submit">Calcular</button>
+    </form>
+{{{resultado}}}
+</section>

@@ -1,0 +1,27 @@
+{{{encabezado}}}
+
+<section>
+    <form method="post" action="index.php?app=calculadora">
+        <input type="hidden" name="accion" value="calcular">
+        <div class="campo">
+            <label for="a">Primer número</label>
+            <input type="text" id="a" name="a" inputmode="decimal" autocomplete="off" required value="{{a}}">
+        </div>
+        <div class="campo">
+            <label for="operacion">Operación</label>
+            <select id="operacion" name="operacion">
+{{{operaciones}}}            </select>
+        </div>
+        <div class="campo">
+            <label for="b">Segundo número</label>
+            <input type="text" id="b" name="b" inputmode="decimal" autocomplete="off" required value="{{b}}">
+            <small>Enteros o decimales; el separador decimal puede ser punto o coma.</small>
+        </div>
+        <button class="boton" type="submit">Calcular</button>
+    </form>
+{{{mensaje}}}
+    <div class="resultado">
+        <h2>Historial</h2>
+{{{historial}}}
+    </div>
+</section>

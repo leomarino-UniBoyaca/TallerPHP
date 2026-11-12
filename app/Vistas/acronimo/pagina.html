@@ -1,0 +1,13 @@
+{{{encabezado}}}
+
+<section>
+    <form method="post" action="index.php?app=acronimo">
+        <div class="campo">
+            <label for="frase">Frase</label>
+            <input type="text" id="frase" name="frase" maxlength="200" autocomplete="off" required value="{{frase}}">
+            <small>Los guiones separan palabras y los demás signos de puntuación se ignoran.</small>
+        </div>
+        <button class="boton" type="submit">Convertir</button>
+    </form>
+{{{resultado}}}
+</section>

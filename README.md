@@ -1,0 +1,1 @@
+Se abre http://localhost/TallerPHP/public/index.php en el navegador. 

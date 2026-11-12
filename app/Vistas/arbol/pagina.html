@@ -1,0 +1,21 @@
+{{{encabezado}}}
+
+<section>
+    <form method="post" action="index.php?app=arbol">
+        <div class="campo">
+            <label for="preorden">Preorden</label>
+            <input type="text" id="preorden" name="preorden" autocomplete="off" value="{{preorden}}">
+        </div>
+        <div class="campo">
+            <label for="inorden">Inorden</label>
+            <input type="text" id="inorden" name="inorden" autocomplete="off" value="{{inorden}}">
+        </div>
+        <div class="campo">
+            <label for="postorden">Postorden</label>
+            <input type="text" id="postorden" name="postorden" autocomplete="off" value="{{postorden}}">
+            <small>Se requieren como mínimo dos recorridos. Los nodos se separan con espacios, comas o flechas. Si se ingresan los tres, se usan preorden e inorden.</small>
+        </div>
+        <button class="boton" type="submit">Construir árbol</button>
+    </form>
+{{{resultado}}}
+</section>
